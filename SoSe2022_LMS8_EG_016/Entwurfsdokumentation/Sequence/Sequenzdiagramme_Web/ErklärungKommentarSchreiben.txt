@@ -1,0 +1,4 @@
+Dieses Sequenzdiagramm zeigt den zeitlichen Ablauf des Anwendungsfalles "Kommentar bei Teilprojekt abgeben". Die App fragt hierbei beim Backend
+zuerst die Projektdaten, dann die Teilprojektdaten und schließlich die jeweiligen Kommentarlisten der Teilprojekte an. Die einzelnen Anfragen werden
+dabei über ein Rest-API geregelt, welches dann im Backend die zur Anfrage gehörigen Daten aus den Repositories abfragt und anschließend wieder an die
+App zurücksendet.

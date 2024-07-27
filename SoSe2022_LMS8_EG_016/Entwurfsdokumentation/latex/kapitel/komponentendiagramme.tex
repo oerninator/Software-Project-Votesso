@@ -1,0 +1,60 @@
+\section{Komponentendiagramm Web}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/componentweb.png}	
+	\caption{Komponentendiagramm - Web}
+	\label{fig:komponentendiagramm-a}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{X X}
+		\rowcolor[HTML]{C0C0C0} 
+		\textbf{Subkomponente} & \textbf{Aufgabe} \\
+		HTML-handler & Verwaltet und erstellt HTML-Dokumente und deren Inhalt. \\
+		\rowcolor[HTML]{E7E7E7}
+		project management & Ruft Daten für Projekte auf und stellt sie dem jeweiligen HTML-Dokument bereit.   \\
+		 subproject management &  Ruft Daten für Teilprojekte auf und stellt sie dem jeweiligen HTML-Dokument bereit. \\
+		 \rowcolor[HTML]{E7E7E7}
+		comment management & Ruft Daten für Kommentare auf und stellt sie dem jeweiligen HTML-Dokument (Detailübersicht eines Teilprojekts) bereit. Verwaltet des Weiteren den Löschvorgang von Kommentaren für Administratoren. \\
+		admin management & Ruft Daten für die Anmeldung als Administrator auf und stellt sie dem jeweiligen HTML-Dokument bereit. Verwaltet außerdem die Autorisierung zum Löschen von Kommentaren.   \\
+		\rowcolor[HTML]{E7E7E7}
+		repositories & Stellt den angefragten Datenbestand der PostgreSQL-Datenbank bereit und ist zentral für die nachträgliche Aktualisierung der Daten im Falle einer Änderung (z.B. Kommentar erstellen oder löschen). \\
+		API-services & Verwaltet den Datenfluss zwischen Backend und App. \\
+		
+	\end{tabularx}
+	\caption{Komponentenbeschreibung - Web}
+	\label{table:komponentenbeschreibung-web}
+\end{table}
+
+
+\section{Komponentendiagramm App}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/componentapp.png}	
+	\caption{Komponentendiagramm - App}
+	\label{fig:komponentendiagramm-b}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{X X}
+		\rowcolor[HTML]{C0C0C0} 
+		\textbf{Subkomponente} & \textbf{Aufgabe} \\
+		write and show comments & Diese Komponente ermöglicht es dem User zu vorher ausgewählten Teilprojekten einen für alle anderen User sichtbaren Kommentar abzugeben oder Kommentare von anderen Usern anzuschauen. \\
+		\rowcolor[HTML]{E7E7E7}
+		create and show evaluation & Diese Komponente bietet dem User die Möglichkeit eine Bewertung in Form von Daumen hoch oder Daumen runter abzugeben und die Bewertung anderer User anzuschauen.   \\
+		 Repository &  Diese Komponente speichert die benötigten Daten zur Laufzeit und stellt sie den anderen Komponenten zur Verfügung. Außerdem kommuniziert sie mit dem APIService um Daten zu senden und zu empfangen. \\
+		 \rowcolor[HTML]{E7E7E7}
+		show projects & In dieser Komponente werden dem User alle verfügbaren Hauptprojekte angezeigt. Außerdem ist sie dafür verantwortlich nach Auswahl eines Hauptprojektes die entsprechende Detailseite anzuzeigen. \\
+		show subprojects & In dieser Komponente werden dem User alle zu einem Hauptprojekt zugehörigen Teilprojekte,  nach Entfernung sortiert, angezeigt. Zudem sorgt diese Komponente auch dafür, die entsprechende Teilprojekt Detailseite anzuzeigen.   \\
+		\rowcolor[HTML]{E7E7E7}
+		APIService & Diese Komponente übernimmt die Kommunikation mit dem Backend. Sie ist sowohl dafür verantwortlich beim Start der App die Daten zu holen, als auch neue Daten zu senden. \\
+		API-services & Verwaltet den Datenfluss zwischen Backend und App. \\
+		
+	\end{tabularx}
+	\caption{Komponentenbeschreibung - App}
+	\label{table:komponentenbeschreibung-app}
+\end{table}

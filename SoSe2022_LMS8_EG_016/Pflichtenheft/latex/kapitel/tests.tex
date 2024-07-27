@@ -1,0 +1,49 @@
+Die folgenden Testfälle decken die wichtigen Anwendungsfälle ab und sollen bei Ablieferung der Software bestanden werden.\\\\
+
+\begin{figure}[!h]
+	\begin{description}
+	  \item[Szenario] Der Nutzer möchte Teilprojekte in seiner Nähe einsehen.
+	  \item[Erwartetes Verhalten] Nutzer wählt auf der Startseite das oberste und damit das ihm nächste Hauptprojekt aus. Er gelangt auf die entsprechende Hauptprojektseite wo er eine Karte findet mit allen Teilprojekten in seiner Nähe und einer Liste in der alle Teilprojekte aufgelistet sind. Über das antippen des entsprechenden Pins eines Teilprojekts auf der Karte oder das Auswählen eines Teilprojekts aus der Liste wird der Nutzer auf die Detailseite des Teilprojekts weitergeleitet.
+	\end{description}
+	\caption{Test zum Anwendungsfall A01}
+\end{figure}
+
+\begin{figure}[!h]
+	\begin{description}
+	  \item[Szenario] Der Nutzer möchte ein Teilprojekte kommentieren. 
+	  \item[Erwartetes Verhalten] Der Nutzer befindet sich auf der Detailseite des Projektes das er kommentieren möchte. Unter den Informationen zum Teilprojekt findet er ein Textfeld in dem er sein Kommentar eingibt. Über das drücken des „Abschicken“-Buttons wird der Kommentar der Kommentarsektion unter dem Teilprojekt hinzugefügt.
+	\end{description}
+	\caption{Test zum Anwendungsfall A01}
+\end{figure}
+
+\begin{figure}[!h]
+	\begin{description}
+	  \item[Szenario] Der Nutzer möchte ein Teilprojekte bewerten. 
+	  \item[Erwartetes Verhalten] Der Nutzer befindet sich auf der Detailseite des Projektes das er bewerten möchte. Unter dem Textfeld zum Kommentieren findet er zwei Daumen die eine positive und eine negative Bewertung repräsentieren. Nachdem er den entsprechenden Daumen ausgewählt hat kann er über den „Bewertung abschicken“-Button seine Bewertung abgeben.
+	\end{description}
+	\caption{Test zum Anwendungsfall A03}
+\end{figure}
+
+\begin{figure}[!h]
+	\begin{description}
+	  \item[Szenario] Der Nutzer möchte die URL ändern die zur Kommunikation zum Backend-Server genutzt wird. 
+	  \item[Erwartetes Verhalten] Durch das antippen des Zahnrades auf der Startseite der App gelangt der Nutzer zu einer Einstellungsseite. Im Textfeld der Einstellungsseite kann der Nutzer die gewünschte URL eingeben und diese durch das antippen des "Bestätigen"-Buttons bestätigen. Ein Bestätigungstext gibt Auskunft über den Erfolg der Änderung.
+	\end{description}
+	\caption{Test zum Anwendungsfall A04}
+\end{figure}
+
+\begin{figure}[!h]
+	\begin{description}
+	  \item[Szenario] Der Administrator möchte einen Kommentar zu einem Teilprojekt löschen.
+	  \item[Erwartetes Verhalten] Der Administrator befindet sich auf der Detailseite eines Teilprojektes. Über einen Link kommt er zu einer Liste aller Kommentare zu diesem Teilprojekt. Unter jedem Kommentar findet er einen „Löschen“-Button. Über das Anklicken des „Löschen“-Button unter dem zu löschen Kommentar wird es aus der Liste entfernt. An der Stelle des gelöschten Kommentars findet der Administrator zur Bestätigung den Schriftzug „Dieser Kommentar wurde vom Administrator gelöscht.“
+	\end{description}
+	\caption{Test zum Anwendungsfall W01}
+\end{figure}
+
+\begin{figure}[!h]
+	\begin{description}
+	  \item[Szenario] Der Administrator möchte die URLs der Anwendung zur Datenbank ändern.
+	  \item[Erwartetes Verhalten] Über das Einstellungen-Symbol kommt der Administrator auf eine Seite auf der er unter dem Schriftzug "Datenbank URL" die gewünschte URL eingeben kann. Über den "Bestätigen"-Button kann die neu eingegebene URL aktiviert werden. Ist dies erfolgreich erscheint ein entsprechender Bestätigungstext.  
+	\end{description}
+	\caption{Test zum Anwendungsfall W02}
+\end{figure}

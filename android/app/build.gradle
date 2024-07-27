@@ -1,0 +1,74 @@
+ plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.mvvm"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'org.osmdroid:osmdroid-android:6.1.6'
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'androidx.room:room-common:2.4.3'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'androidx.test:core:1.4.0'
+
+    testImplementation 'junit:junit:4.12'
+
+    // Espresso
+    def androidx_test_espresso = "3.1.0"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidx_test_espresso"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$androidx_test_espresso"
+    implementation "androidx.test.espresso:espresso-idling-resource:$androidx_test_espresso"
+
+    /**
+    implementation 'androidx.test.espresso:espresso-contrib:3.4.0'
+
+    implementation "androidx.test.espresso:espresso-idling-resource:3.4.0"
+    testImplementation 'junit:junit:4.13.2'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    ^*/
+
+
+    implementation 'org.osmdroid:osmdroid-android:6.1.0'
+
+    // Database
+    def database_version = "2.4.3"
+    implementation "androidx.room:room-runtime:$database_version"
+    annotationProcessor "androidx.room:room-compiler:$database_version"
+    implementation "androidx.room:room-rxjava3:$database_version"
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+}

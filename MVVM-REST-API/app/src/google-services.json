@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "489756125614",
+    "project_id": "mvvm-rest-api-9cdf7",
+    "storage_bucket": "mvvm-rest-api-9cdf7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489756125614:android:9f7c4f695d53a16996003f",
+        "android_client_info": {
+          "package_name": "com.learntodroid.mvvmrestapi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489756125614-sisf4e7jpahnv174hk6o9ogumls1a527.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIIxSaj9Xlb_QOLILcQPUlXtZhicBxCJQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489756125614-sisf4e7jpahnv174hk6o9ogumls1a527.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

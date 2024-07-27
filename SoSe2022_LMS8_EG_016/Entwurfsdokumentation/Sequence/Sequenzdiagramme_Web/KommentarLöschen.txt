@@ -1,0 +1,5 @@
+Dieses Sequenzdiagramm zeigt den zeitlichen Ablauf des Anwendungsfalles "Kommentare löschen". Um die Berechtigung zu haben, Kommentare löschen zu
+können, muss sich der User ersteinmal einloggen. Der Loginprozess wird vom Spring Boot Framework übernommen. Nach einem erfolgreichen Login wird
+man dann zur "Home" Seite weitergeleitet. Dabei wird die Methode showHome() vom Controller aufgerufen, der sich erst die nötigen Daten aus dem
+jeweiligen Repository zieht und anschließend eine auf den Daten basierende .html Datei zurückgibt. Der Ablauf vom Controller bis zur .html Datei
+geschieht analog mit den Daten vom Projekt, Teilprojekt und Kommentar.  

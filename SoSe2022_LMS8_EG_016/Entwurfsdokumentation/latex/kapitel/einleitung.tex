@@ -1,0 +1,48 @@
+Nachdem die Anforderungen an die Software, das Anwendungsgebiet und die Zielgruppe bestimmt wurden, wird nun ein abstrakteres (und deutlich technischeres) Modell dokumentiert. Die nach dem Pflichtenheft zu erstellende Entwurfsdokumententation  legt technische Spezifikationen des zukünfigten Systems der Software fest.
+
+In dieser Phase der Dokumentation sollen erste Nachweise geschaffen werden, die die technische Umsetzbarkeit des Systems
+und die richtige Funktionsweise zeigen. Wichtig ist hierbei zu beachten, dass es sich um einen ersten Entwurf der Software nach jetzigem Verständnis der verwendeten Technologien und Systemumgebung handelt. Während der Softwareentwicklung werden sich Teile des Systementwurfs nach Notwendigkeiten ändern. Dies wird seperat dokumentiert.\\
+
+
+Hier wird versucht die realen Anforderungen in technischer Hinsicht abzubilden.
+Im Vordergrund steht die Transparenz der Systemarchitektur durch die Abbildung wichtiger Prozesse und Interaktionen zwischen Systemteilen.
+Um eine möglichst genauen und verständlichen Überblick zu schaffen, werden hier einige verschiedene Diagrammarten, welche sich an der UML orientieren, verwendet:\\
+Der Einsatz von Hardware und die dort eingesetzten Softwareumgebungen zur Ausführung der Systemteile sind in Verteilungsdiagrammen zu erkennen.\\
+Eine kompaktere und weniger detailtierte Ansicht des Systems sind in Komponentendiagrammen zu finden, in denen auch externe Anbindungen realisiert sind.\\
+Sinn der Klassendiagramme ist unter anderem die Zusammenhänge von Klassen und Komponenten darzustellen und die Komplexität dieser gezielt zum Beispiel durch
+Modularisierung zu reduzieren.\\
+Um die Abläufe und Kommunikation zwischen Komponenten und Klassen zur Laufzeit darzustellen, werden Sequenzdiagramme verwendet.\\
+\begin{tcolorbox}
+Die Diagramme sind nochmal separat in einem Unterordner (als Vektorgrafik) zu finden, da sie zum Teil komplex und recht groß ausfallen und möglicherweise in diesem Dokument schwer zu lesen sind.
+\end{tcolorbox}
+
+\newpage
+\section{Entwicklungsumgebung}\label{sec:entwicklungsumgebung}
+
+\begin{table}[h]
+	\centering
+	\begin{tabularx}{\textwidth}{l l X}
+		\rowcolor[HTML]{C0C0C0} 
+		\textbf{Software} & \textbf{Version} & \textbf{URL} \\
+		Java Development Kit & 17.0.1 & \url{http://www.oracle.com/technetwork/java/javase/downloads/index.html} \\
+		\rowcolor[HTML]{E7E7E7} 
+		Android Studio Chipmunk & 2021.2.1 (Patch 2) & \url{https://developer.android.com/studio} \\
+		Android & 11 & \url{https://developer.android.com/about/versions/11/} \\
+		\rowcolor[HTML]{E7E7E7} 
+		Spring Boot & 2.7.0 & \url{https://spring.io/} \\
+		Thymeleaf & von Spring eingebunden & \url{https://www.thymeleaf.org/} \\
+		\rowcolor[HTML]{E7E7E7} 
+		Bootstrap & von Spring eingebunden & \url{https://getbootstrap.com/} \\
+		Lombok & 6.4.3 & \url{https://projectlombok.org/} \\
+		\rowcolor[HTML]{E7E7E7} 
+		Gradle & 7.5.1 & \url{https://gradle.org/} \\
+		Docker & 20.10.17 & \url{https://www.docker.com/} \\
+		\rowcolor[HTML]{E7E7E7} 
+		Git & 2.37.3 & \url{https://git-scm.com/} \\
+		Retrofit & 2.9.0 & \url{https://square.github.io/retrofit/} \\
+		\rowcolor[HTML]{E7E7E7} 
+		PostgreSQL & 9.6.21  & \url{https://www.postgresql.org/}\\
+	\end{tabularx}
+	\caption{Enwicklungsumgebung}
+	\label{table:entwicklungsumgebung}
+\end{table}

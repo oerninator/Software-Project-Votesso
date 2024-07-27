@@ -1,0 +1,116 @@
+        \begin{table}
+         \centering
+         \begin{tabularx}{\textwidth}{ X | X | X | X} 
+           \textbf{Attribut}  & \textbf{Datentyp} & \textbf{Einschränkung} & \textbf{Kurzbechreibung} \\ \hline \hline
+           ProjektID      & Integer   & PRIMARY KEY, NOT NULL  
+           & ID, welche das zugehörige Projekt eindeutig bestimmt \\ \hline
+           Name           & String    & NOT NULL               
+           & Name des Projektes \\ \hline
+           Informationen  & String    & -
+           & Allgemeine Informationen über das Projekt \\ \hline
+           Ort            & String    & NOT NULL 
+           & Ortsangabe des Projektes \\ \hline
+           Startdatum     & Date      & NOT NULL
+           & Datum, an dem das Projekt gestartet hat \\ \hline
+           Projektfortschritt & Integer & NOT NULL
+           & Der Projektfortschritt auf einer Skala von 1 - 100 \\ \hline
+           Liste von Teilprojekten & Liste von Teilprojekten & FOREIGN KEY, NOT NULL
+           & Eine Liste von allen Teilprojekten des Projektes \\ \hline
+           Bild           & Image     & -
+           & Optionales Bild des Projektes \\ \hline
+           
+         \end{tabularx}
+            
+         \caption{Projekt (Read)}
+    
+       \end{table}
+
+       \begin{table}
+         \centering
+         \begin{tabularx}{\textwidth}{ X | X | X | X} 
+           \textbf{Attribut}  & \textbf{Datentyp} & \textbf{Einschränkung} & \textbf{Kurzbechreibung} \\ \hline \hline
+           TeilprojektID      & Integer   & PRIMARY KEY, NOT NULL  
+           & ID, welche das zugehörige Teilprojekt eindeutig bestimmt \\ \hline
+           Name           & String    & NOT NULL               
+           & Name des Teilprojektes \\ \hline
+           Informationen  & String    & -
+           & Allgemeine Informationen über das Teilprojekt \\ \hline
+           Ort            & String    & NOT NULL 
+           & Ortsangabe des Teilprojektes \\ \hline
+           Startdatum     & Date      & NOT NULL
+           & Datum, an dem das Teilprojekt gestartet hat \\ \hline
+           Bild           & Image     & -
+           & Optionales Bild des Projektes \\ \hline
+           Kommentarliste & Liste von Kommentaren  & FOREIGN KEY
+           & Liste, die alle Kommentare zu dem jeweiligen Teilprojetk beinhaltet \\ \hline
+           Bewertungsliste & Liste von Bewertungen   & FOREIGN KEY
+           & Beinhaltet alle zum Teilprojekt abgegebenen Bewertungen \\ \hline
+           
+           
+           
+           
+         \end{tabularx}
+            
+         \caption{Teilprojekt (Read)}
+    
+       \end{table}
+
+       \begin{table}
+         \centering
+         \begin{tabularx}{\textwidth}{ X | X | X | X} 
+           \textbf{Attribut}  & \textbf{Datentyp} & \textbf{Einschränkung} & \textbf{Kurzbechreibung} \\ \hline \hline
+           Inhalt      &   String   & PRIMARY KEY, NOT NULL  
+           & Inhalt des Kommentares \\ \hline
+           Status      & Boolean    & NOT NULL
+           & Das Kommentar kann gelöscht oder noch vorhanden sein \\ \hline 
+           Nutzername & String & - & Der Benutzer kann optional einen Benutzernamen hinzufügen \\ \hline
+           Erstelldatum & Date & NOT NULL & Datum, wann das Kommentar abgeschickt wurde \\ \hline
+         \end{tabularx}
+            
+         \caption{Kommentar (Read)}
+    
+       \end{table}
+
+       \begin{table}
+         \centering
+         \begin{tabularx}{\textwidth}{ X | X | X | X} 
+           \textbf{Attribut}  & \textbf{Datentyp} & \textbf{Einschränkung} & \textbf{Kurzbechreibung} \\ \hline \hline
+           Bewertungsstatus & Flag & PRIMARY KEY, NOT NULL 
+           & Die Bewertung kann positiv oder negativ sein\\ \hline                                    
+         \end{tabularx}
+            
+         \caption{Bewertungen (Read)}
+    
+       \end{table}
+
+       \begin{table}
+         \centering
+         \begin{tabularx}{\textwidth}{ X | X | X | X} 
+           \textbf{Attribut}  & \textbf{Datentyp} & \textbf{Einschränkung} & \textbf{Kurzbechreibung} \\ \hline \hline
+           Admin & Boolean & PRIMARY KEY, NOT NULL 
+           & Zeigt an, ober der Benutzer Adminstrator oder Gast ist\\ \hline 
+           Kommentarliste & Liste von Kommentaren  & FOREIGN KEY
+           & Liste von allen Kommentaren, die von dem jeweiligen Benutzer verfasst worden \\ \hline
+           Standort & String & - & Der Standort des Benutzers \\ \hline
+                   
+         \end{tabularx}
+            
+         \caption{Benutzer (Read, Write)}
+    
+       \end{table}
+
+        \begin{table}
+         \centering
+         \begin{tabularx}{\textwidth}{ X | X | X | X} 
+           \textbf{Attribut}  & \textbf{Datentyp} & \textbf{Einschränkung} & \textbf{Kurzbechreibung} \\ \hline \hline
+           URL-Backend & String & PRIMARY KEY, NOT NULL 
+           & URL-Adresse der Datenbank\\ \hline
+           URL-Consul & String & NOT NULL 
+           & URL-Adresse der Datenbank\\ \hline
+           Admin-Benutzername & String & PRIMARY KEY, NOT NULL & Der Beutzername, um sich als Adminstrator einloggen zu können \\ \hline
+           Admin-Passwort & String & NOT NULL & Verschlüsseltes Passwort, welches in Kombination mit dem Benutzernamen eingegeben werden muss, um sich als Admin einzuloggen \\ \hline
+         \end{tabularx}
+            
+         \caption{Systemkonfiguration (Read)}
+    
+       \end{table}

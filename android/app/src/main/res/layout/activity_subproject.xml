@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/back_arrow_subproject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027"
+        app:srcCompat="@drawable/ic_baseline_chevron_left_24" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainBackground"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".activities.SubprojectActivity">
+
+            <ImageView
+                android:id="@+id/imageViewSubprojectDetailsID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_subproject_title_ID" />
+
+            <TextView
+                android:id="@+id/text_view_subproject_title_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="@font/averia_sans_libre_bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="90px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_view_subproject_price_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/arimo"
+                android:text="Budget: "
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewSubprojectDetailsID" />
+
+            <TextView
+                android:id="@+id/text_view_subproject_price_text_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/arimo"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@id/text_view_subproject_price_ID"
+                app:layout_constraintTop_toBottomOf="@id/imageViewSubprojectDetailsID" />
+
+            <TextView
+                android:id="@+id/text_view_subproject_info_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_subproject_price_ID" />
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/thumb_up_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:clickable="true"
+                android:visibility="visible"
+                app:backgroundTint="@android:color/white"
+                app:elevation="12dp"
+                app:layout_constraintEnd_toStartOf="@id/thumb_down_ID"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_subproject_info_ID"
+                app:srcCompat="@drawable/daumen_hoch"
+                app:tint="@color/thumbUpGreen" />
+
+            <TextView
+                android:id="@+id/text_view_thumb_up_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="20dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toStartOf="@+id/thumb_up_ID"
+                app:layout_constraintTop_toBottomOf="@id/text_view_subproject_info_ID" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/thumb_down_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:clickable="true"
+                android:visibility="visible"
+                app:backgroundTint="@android:color/white"
+                app:elevation="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/thumb_up_ID"
+                app:layout_constraintTop_toBottomOf="@id/text_view_subproject_info_ID"
+                app:srcCompat="@drawable/daumen_runter"
+                app:tint="@color/thumbDownRed" />
+
+            <TextView
+                android:id="@+id/text_view_thumb_down_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="45dp"
+                android:textSize="20dp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@id/thumb_down_ID"
+                app:layout_constraintTop_toBottomOf="@id/text_view_subproject_info_ID" />
+
+            <TextView
+                android:id="@+id/text_view_comment_title_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/arimo"
+                android:gravity="center"
+                android:text="Teilen Sie uns gerne Ihre Meinung mit."
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/thumb_down_ID" />
+
+            <View
+                android:id="@+id/comment_text_box_ID"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/comment_box"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_comment_title_ID">
+
+
+            </View>
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Antippen, um einen Kommentar zu verfassen..."
+                android:inputType="textMultiLine"
+                android:maxLines="6"
+                app:layout_constraintEnd_toEndOf="@id/comment_text_box_ID"
+                app:layout_constraintStart_toStartOf="@id/comment_text_box_ID"
+                app:layout_constraintTop_toBottomOf="@id/button_tostart_comments"
+                app:layout_constraintTop_toTopOf="@id/comment_text_box_ID" />
+
+            <Button
+                android:id="@+id/button_comment_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/comment_button_color"
+                android:text="Kommentieren"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/comment_text_box_ID" />
+
+            <Button
+                android:id="@+id/button_tostart_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:backgroundTint="@color/comment_button_color"
+                android:onClick="viewComments"
+                android:text="Kommentare ansehen"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_comment_ID" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

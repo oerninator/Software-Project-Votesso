@@ -1,0 +1,93 @@
+##################
+GRUPPE LMS 8/16
+##################
+
+# Titelseite
+
++ Schönes Logo
++ Witzige Idee mit dem Namen der Gruppe
+(+ Inhaltsverzeichnis)
+
+# Lizenz
+
+Apache License, Version 2.0
+
+# Produkteinsatz
+
++ Schöne Unterteilung in Zielgruppe und Anwendungsgebiet.
++ Schön auf die Wirkung auf die Anwender eingegangen.
+
+# Zielbestimmungen
+
++ Gute Aufteilung in Web und App, bzw. der Vereinigung.
+- Die eingeführte Notation wirkt redundant, da jedes Mal wieder aufgeführt wird, in welche Kategorie die jeweiligen Kriterien fallen (siehe "i) Startseite"). Die kleinen Überschriften hätten da gereicht.
+
+Musskriterien:
+ + Alles vorhanden.
+
+Sollkriterien:
+ + Gute Idee mit der Bewertung der Teilprojekte.
+
+Kannkriterien:
+ + Gute Kriterien, alles vorhanden.
+
+Abgrenzungskriterien:
+ + Sinnvoll und nachvollziehbar.
+
+# Produktfunktionen
+
++ Alle Akteure genannt und sinnvoll beschrieben.
+
+## Anwendungsfalldiagramm App
+
+- Keine Verwendung von Extend- und/oder Include-Beziehungen. => Daraus resultierend fehlen (relevante) Beziehungen zwischen den Anwendungsfällen, wie z. B. sollte vor dem Erstellen eines Kommentars zu einem Teilprojekt erstmal ein Teilprojekt ausgewählt werden.
++ Exotische aber soweit sinnvolle Nutzung der Vererbungsbeziehung zwischen Anwendungsfällen.
+
+## Anwendungsfalldiagramm Web
+
+- Keine Verwendung von Extend- und/oder Include-Beziehungen. => Auch hier: Damit der Admin z. B. Kommentare löschen kann, muss er sich doch erstmal anmelden/authentifizieren.
+- Wo sind die Anwendungsfälle für die Kannkriterien?
+
+## Anwendungsfälle (inkl. Tabelle, Mockups, Testfälle)
+
++ Schön, dass die Mockups bei den entsprechenden Anwendungsfällen stehen.
++ Alle im Diagramm aufgeführten Anwendungsfälle sind vorhanden.
+- Fehlen einiger Kannkriterien (diese werden aber auch bereits in den Diagrammen nicht aufgeführt).
+
+A01:
+ - ID etwas irreführend, da diese suggeriert, dass es sich um einen Anwendungsfall ausschließlich für die App handelt, was nicht der Fall zu sein scheint.
+
+A02:
+ - Kurzbeschreibung wiederholt größtenteils den Namen des Anwendungsfalls wortgenau.
+ - Um auf der Detailseite eines Teilprojektes zu sein, muss der Anwendungsfall A01 ausgeführt werden. Somit stehen die beiden Fälle streng genommen in einer Beziehung zueinander.
+
+A03:
+ - Siehe Anmerkung A02.
+
+A04:
+ - Ausnahme: Was passiert bei einer ungültigen Eingabe?
+
+W01:
+ - ID: Siehe Anmerkung A01.
+ - Kurzbeschreibung: Siehe Anmerkung A02.
+ - Damit der Administrator eingeloggt ist, muss eine Authentifizierung vorgenommen werden. Somit steht dieser Anwendungsfall in direkter Beziehung mit dem Anwendungsfall "Login" aus dem Diagramm. Für "Login" ist nicht unbedingt eine Tabelle nötig, aber im Diagramm sollte die hier in der Tabelle aufgeführte Beziehung zu erkennen sein.
+
+W02:
+ - Login: Siehe Anmerkung W01.
+ - Ausnahme: Siehe Anmerkung A04.
+
+# Produktdaten
+
++ Schön, dass ihr erwähnt, welche Art von Zugriff bereitgestellt wird.
+- Ein Satz als Einleitung, um darauf zu verweisen, ob alle eure aufgeführten Attribute aus der Consul-DB kommen, hätte den Lesefluss begünstigt.
+- Z. B. URL für Backend, bzw. Consul-DB muss lokal gespeichert werden. Es wäre gut, wenn das aus den Produktdaten ersichtlich wird, dass es sich bei Tabelle 6.6 nicht um Daten aus der Consul-DB handelt.
+
+# Glossar
+
++ Nur Domänen-spezifische Begriffe aufgeführt.
+
+# Allgemeine Hinweise, Zusammenfassung und Note
+
+- Ergänzend: Es finden sich gehäuft Rechtschreib- und Grammatikfehler.
+- Consul nur indirekt referenziert
+- Note: 1.3

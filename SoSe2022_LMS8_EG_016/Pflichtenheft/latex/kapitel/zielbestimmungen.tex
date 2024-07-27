@@ -1,0 +1,120 @@
+Im Folgenden werden Notationen "i)", "ii)", "iii)" und "iv)" verwendet, die zur semantischen Zuordnung von Informationen über die Arten der Kriterien hinaus dienen sollen. Die Bedeutung der Notation sei wie folgt definiert:\\\\
+
+\begin{tabularx}{\textwidth}{X X}
+		\rowcolor[HTML]{C0C0C0}
+		\textbf{Notation} & \textbf{Bedeutung} \\
+		i) & Kriterien für die Startseite\\
+		\rowcolor[HTML]{E7E7E7} 
+		ii) & Kriterien für die Seite eines Hauptprojekts\\
+		iii) & Kriterien für die Seite eines Teilprojekts\\
+		\rowcolor[HTML]{E7E7E7} 
+		iv) & Kriterien für den allgemeinen Datenbestand\\
+\end{tabularx}
+
+\begin{markdown}
+  
+Des Weiteren werden die Kriterien (soweit notwendig) zur App und/oder zur Webanwendung zugeteilt.
+
+## Muss-Kriterien
+
+**App & Webanwendung**
+
+i) Startseite
+
+* Präsentation aller Hauptprojekte mit Weiterleitungsmöglichkeit zum jeweiligen Inhalt
+
+ii) Hauptprojekt
+
+* Darbietung aktualisierter Informationen des Hauptprojekts
+* Auflistung aller zugehörigen Teilprojekte mit Weiterleitungsmöglichkeit zur Inhaltsübersicht
+* Ordnung von Teilprojekt-Liste nach geodatenbasierter Relevanz
+* Es wird ein Zurück-Button bereitgestellt, welcher den Anwender zur Startseite zurückführt
+
+iii) Teilprojekt
+
+* Darbietung aktualisierter Informationen des Teilprojekts
+* Implementierung von einem Zurück-Button, welcher den Anwender zur Seite des übergeordneten Hauptprojekts zurückleitet
+* Kommentare von AuA zu einem Teilprojekt sind für alle AuA sichtbar
+
+iv) Datenbestand
+
+* Die App und die Webanwendung teilen sich denselben Datenbestand, der nach jeder Änderung von Projektinhalten und Verfassen von Kommentaren aktualisiert wird
+* Verbal-geschriebene bzw. textuelle Informationen werden in der deutschen Sprache dargeboten
+* Für die Erstanwendung der App und Webanwendung werden notwendige Standardwerte in Hinsicht der Netzwerkadressierung automatisch implementiert
+
+**App**
+
+i) Startseite
+
+* AuA erhalten die Möglichkeit Netzwerkadressen und Ports der App-Anwendung der Hintergrunddienste zu spezifizieren
+
+iii) Teilprojekt
+
+* AuA haben die Möglichkeit einen Kommentar zum Teilprojekt zu verfassen
+
+**Webanwendung**
+
+i) Startseite
+
+* Weiterleitungsmöglichkeit zur Login-Seite für Admins
+* Admins können Kommentare löschen
+* Der Admin kann die notwendigen Netzwerkadressen und Ports von Consul und der zugehörigen Datenbank über eine Maske in der Webanwendung manuell einstellen
+
+## Soll-Kriterien
+
+**App und Webanwendung**
+
+ii) Hauptprojekt
+
+* Einbettung von Informationen über den Fortschritt und die Planung des Hauptprojekts
+
+iii) Teilprojekt
+
+* AuA können Teilprojekte bewerten. Dafür wird es die Möglichkeit zu einer positiven oder negativen Bewertung geben.
+
+**App**
+
+iii) Teilprojekt
+
+* Geodatenbasierte Anzeige der Stadtkarte inklusive Stecknadeln der zugehörigen Teilprojekte
+
+## Kann-Kriterien
+
+**App und Webanwendung**
+
+i) Startseite
+
+* Weiterleitung zur Detailseite der Hauptprojekte über Pinnadeln auf einer Karte
+
+ii) Hauptprojekt
+
+* Zusätzliche Weiterleitungsmöglichkeit zur Detailseite eines Teilprojekts über die Stecknadeln auf der Stadtkarte
+* AuA können das Hauptprojekt kommentieren und bewerten
+* AuA können eigene Kommentare löschen und bearbeiten
+
+iii) Teilprojekt
+
+* AuA können eigene Kommentare löschen und/oder bearbeiten
+
+iv) Datenbestand
+
+* AuA können sich registrieren, anmelden und abmelden.
+* Anzeige der durchschnittlichen Bewertung von einem ii) Hauptprojekt oder iii) Teilprojekt
+* Verbal-geschriebene bzw. textuelle Informationen werden in mehreren Sprachen angeboten
+\end{markdown}
+\newpage
+
+\begin{markdown}
+## Abgrenzungskriterien
+
+**App und Webanwendung**
+
+* In der App und Webanwendung wird keine Funktion bereitgestellt die die Einbindung der Kamera benötigt
+* Auf Kommentare kann nicht geantwortet werden
+* AuA können nicht abstimmen, ob ein Hauptprojekt durchgeführt werden soll und es werden auch keine Alternativen zum jeweiligen Hauptprojekt angeboten
+* AuA werden nicht geprüft, ob sie in Kiel gemeldet sind
+
+## Sonstiges
+
+* In Achtung der vom Kunden gesetzten Rahmenbedingung wird für die Umsetzung der Anwendungen die Programmiersprache Java verwendet
+\end{markdown}
